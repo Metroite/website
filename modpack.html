@@ -100,7 +100,7 @@
     <script>
     function copyLink(event) {
         event.preventDefault()
-        navigator.clipboard.writeText(window.location.hostname + "/" + event.target.getAttribute('href')).then(() => {
+        navigator.clipboard.writeText(window.location.origin + "/" + event.target.getAttribute('href')).then(() => {
             let x = document.getElementById("snackbar")
             snackbar("Link kopiert!")
         })
