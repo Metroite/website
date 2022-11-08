@@ -1,0 +1,48 @@
+<script>
+	function copyLink() {
+        navigator.clipboard.writeText(window.location.origin + "/" + document.getElementById("copyLink")?.getAttribute('href')).then(() => {
+            let x = document.getElementById("copyLink");
+			console.log(x);
+        })
+    }
+</script>
+
+<svelte:head>
+	<title>Modpack</title>
+	<meta name="description" content="Instructions on how to install the modpack" />
+</svelte:head>
+
+<div class="text-column">
+	<h1>Modpack instructions</h1>
+
+	<p>
+		Kopiere den Link zum <button title="Click to copy" id="copyLink" class="copyLink" href="Kings.mrpack" on:click|preventDefault={() => copyLink()}>Modpack</button> und füge den Link
+		in <a href="https://prismlauncher.org/download/">PrismLauncher</a> oder, falls mit kostenlosem
+		<a href="https://account.ely.by/login">ely.by Account</a>, in
+		<a href="https://github.com/fn2006/PollyMC/releases/download/5.1-hotfix2/PollyMC-Windows-5.1-hotfix2.zip">PollyMc</a> ein unter:
+	</p>
+
+	<pre>Add Instanz > Import from zip</pre>
+
+	<p>
+		Stell sicher, dass <a href="https://adoptium.net/de/">Java 17</a> ausgewählt ist im Launcher:
+	</p>
+
+	<pre>Einstellungen > Java > Auto-detect</pre>
+</div>
+
+<style>
+	.copyLink {
+		border-radius: 0.5em;
+	}
+
+	.copyLink:hover {
+		background-color: #ff3e00;
+	}
+
+	.copyLink:active {
+		background-color: #40b3ff;
+		box-shadow: 0 2px #666;
+		transform: translateY(2px);
+	}
+</style>

@@ -1,150 +1,65 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-adfb702a.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-d9442a61.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-1a095080.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-5fb8b1eb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-30b6cfc1.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-a757577a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores-af793b53.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-23837ba8.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_page.ts-e9fa0128.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page-802cc2a3.js"><title>Home</title><!-- HEAD_svelte-t32ptj_START --><meta name="description" content="Svelte demo app"><!-- HEAD_svelte-t32ptj_END -->
+	</head>
+	<body data-sveltekit-prefetch>
+		<div>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        p {
-            display: inline;
-            font-size: 6vw;
-            margin-top: 0px;
-        }
 
-        body{
-            margin: 0;
-            background-color: #1d1e22;
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            height: 100vh;
-        }
+<div class="app svelte-9mou4b" id="parallax"><header class="svelte-1u9z1tp"><div class="corner svelte-1u9z1tp"></div>
 
-        #parallax {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background-image: url(), url(), url(https://i.redd.it/h64tbetfd6a11.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-position: 50% 50%;
-        }
-        
-        h1 {
-            position: absolute;
-            top: 43%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-family: "Arial";
-            text-transform: uppercase;
-            opacity: 0.7;
-            text-shadow: 0.5vw 0.5vw #000000;
-        }
+	<nav class="svelte-1u9z1tp"><svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-1u9z1tp"><path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" class="svelte-1u9z1tp"></path></svg>
+		<ul class="svelte-1u9z1tp"><li aria-current="page" class="svelte-1u9z1tp"><a href="/" class="svelte-1u9z1tp">Home</a></li>
+			<li class="svelte-1u9z1tp"><a href="/modpack" class="svelte-1u9z1tp">Modpack</a></li>
+			<li class="svelte-1u9z1tp"><a href="/next" class="svelte-1u9z1tp">Next</a></li></ul>
+		<svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-1u9z1tp"><path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" class="svelte-1u9z1tp"></path></svg></nav>
 
-        .rainbowText {
-            font-family:arial black;
-            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;  
-            animation: move 100s linear infinite;
-        }
+	<div class="corner svelte-1u9z1tp"></div>
+</header>
 
-        @keyframes move {
-        to {
-            background-position: 4500vh;
-        }
-        }
+	<main class="svelte-9mou4b">
 
-        .footer {
-            position: absolute;
-            top: 90%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3vw;
-        }
+<section class="svelte-1lfhta"><h1 class="svelte-1lfhta"><div class="rainbowText svelte-1lfhta">Minecraft IP: metroite.de
+        </div></h1>
+</section></main>
 
-        .header {
-            color: #fff;
-            opacity: 0.7;
-            text-shadow: 0.3vw 0.3vw #000000;
-            position: absolute;
-            top: 15%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3vw;
-        }
+	<footer class="svelte-9mou4b"><p>visit <a href="modpack" class="svelte-9mou4b">metroite.de/modpack</a> for instructions</p></footer>
+</div>
 
-        div {
-            font-size: 7vw;
-        }
-    </style>
-</head>
 
-<body>
-    <div id="parallax">
-        <h1>
-            <div class="rainbowText">Minecraft IP: metroite.de</div>
-        </h1>
-    </div>
+		<script type="module" data-sveltekit-hydrate="1y89am6">
+			import { start } from "./_app/immutable/start-1a095080.js";
 
-    <div class="header">
-        <div>next update:</div>
-        <div>
-            <p id="days"></p>
-            <p id="hours"></p>
-            <p id="mins"></p>
-            <p id="secs"></p>
-            <h2 id="end"></h2>
-        </div>
-    </div>
-
-    <div class="footer">
-        <a href="modpack.html">Modpack Instructions</a>
-    </div>
-<script>
-    // The data/time we want to countdown to
-    const countDownDate = new Date("Nov 12, 2022 21:00:00").getTime();
-
-    // Run countdown every second
-    const countdown = setInterval(function () {
-
-        let now = new Date().getTime();
-        let timeleft = countDownDate - now;
-
-        // Calculating the days, hours, minutes and seconds left
-        let days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-
-        // Result is output to the specific element
-        document.getElementById("days").innerHTML = days + "D "
-        document.getElementById("hours").innerHTML = hours + "H "
-        document.getElementById("mins").innerHTML = minutes + "M "
-        document.getElementById("secs").innerHTML = seconds + "S "
-    }, 1000);
-
-    (function () {
-            // Add event listener
-            document.addEventListener("mousemove", parallax);
-            const elem = document.querySelector("#parallax");
-            // Magic happens here
-            function parallax(e) {
-                let _w = window.innerWidth / 2;
-                let _h = window.innerHeight / 2;
-                let _mouseX = e.clientX;
-                let _mouseY = e.clientY;
-                let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
-                let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
-                let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-                let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-                console.log(x);
-                elem.style.backgroundPosition = x;
-            }
-
-    })();
-</script>
-</body>
-
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2],
+					params: {},
+					route: {"id":"/"},
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1y89am6"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
+	</body>
 </html>

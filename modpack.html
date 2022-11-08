@@ -1,137 +1,49 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-adfb702a.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-cdc53ac6.css" rel="stylesheet"><title>Modpack</title><!-- HEAD_svelte-ivsyae_START --><meta name="description" content="Instructions on how to install the modpack"><!-- HEAD_svelte-ivsyae_END -->
+	</head>
+	<body data-sveltekit-prefetch>
+		<div>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        p {
-            display: inline;
-            font-size: 40px;
-            margin-top: 0px;
-        }
-        body{
-            margin: 0;
-            background-color: #1d1e22;
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            height: 100vh;
-        }
 
-        #parallax {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background-image: url(), url(), url(https://i.redd.it/h64tbetfd6a11.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-position: 50% 50%;
-        }
-        h1 {
-            position: absolute;
-            top: 43%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-family: "Arial";
-            text-transform: uppercase;
-            opacity: 0.7;
-            font-size: 5vw;
-            text-shadow: 0.3vw 0.3vw #000000;
-        }
+<div class="app svelte-9mou4b" id="parallax"><header class="svelte-1u9z1tp"><div class="corner svelte-1u9z1tp"></div>
 
-         /* The snackbar - position it at the bottom and in the middle of the screen */
-        #snackbar {
-            visibility: hidden; /* Hidden by default. Visible on click */
-            min-width: 250px; /* Set a default minimum width */
-            margin-left: -125px; /* Divide value of min-width by 2 */
-            background-color: #333; /* Black background color */
-            color: #fff; /* White text color */
-            text-align: center; /* Centered text */
-            border-radius: 2px; /* Rounded borders */
-            padding: 16px; /* Padding */
-            position: fixed; /* Sit on top of the screen */
-            z-index: 1; /* Add a z-index if needed */
-            left: 50%; /* Center the snackbar */
-            bottom: 4vw; /* 30px from the bottom */
-            font-family: "Arial";
-        }
+	<nav class="svelte-1u9z1tp"><svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-1u9z1tp"><path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" class="svelte-1u9z1tp"></path></svg>
+		<ul class="svelte-1u9z1tp"><li class="svelte-1u9z1tp"><a href="/" class="svelte-1u9z1tp">Home</a></li>
+			<li aria-current="page" class="svelte-1u9z1tp"><a href="/modpack" class="svelte-1u9z1tp">Modpack</a></li>
+			<li class="svelte-1u9z1tp"><a href="/next" class="svelte-1u9z1tp">Next</a></li></ul>
+		<svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-1u9z1tp"><path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" class="svelte-1u9z1tp"></path></svg></nav>
 
-        /* Show the snackbar when clicking on a button (class added with JavaScript) */
-        #snackbar.show {
-            visibility: visible; /* Show the snackbar */
-            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-            However, delay the fade out process for 2.5 seconds */
-            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-            animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        }
+	<div class="corner svelte-1u9z1tp"></div>
+</header>
 
-        /* Animations to fade the snackbar in and out */
-        @-webkit-keyframes fadein {
-            from {bottom: 0; opacity: 0;}
-            to {bottom: 30px; opacity: 1;}
-        }
+	<main class="svelte-9mou4b">
 
-        @keyframes fadein {
-            from {bottom: 0; opacity: 0;}
-            to {bottom: 30px; opacity: 1;}
-        }
+<div class="text-column"><h1>Modpack instructions</h1>
 
-        @-webkit-keyframes fadeout {
-            from {bottom: 30px; opacity: 1;}
-            to {bottom: 0; opacity: 0;}
-        }
+	<p>Kopiere den Link zum <button title="Click to copy" id="copyLink" class="copyLink svelte-1evufqv" href="Kings.mrpack">Modpack</button> und füge den Link
+		in <a href="https://prismlauncher.org/download/">PrismLauncher</a> oder, falls mit kostenlosem
+		<a href="https://account.ely.by/login">ely.by Account</a>, in
+		<a href="https://github.com/fn2006/PollyMC/releases/download/5.1-hotfix2/PollyMC-Windows-5.1-hotfix2.zip">PollyMc</a> ein unter:
+	</p>
 
-        @keyframes fadeout {
-            from {bottom: 30px; opacity: 1;}
-            to {bottom: 0; opacity: 0;}
-        } 
-    </style>
-</head>
+	<pre>Add Instanz &gt; Import from zip</pre>
 
-<body>
-    <div id="parallax">
-        <h1>
-            Kopiere den Link zum <a href="Kings.mrpack" onclick="copyLink(event)">Modpack</a> und füge den Link in <a href="https://prismlauncher.org/download/">PrismLauncher</a> oder <a href="https://github.com/fn2006/PollyMC/releases/download/5.1-hotfix2/PollyMC-Windows-5.1-hotfix2.zip">PollyMc</a> unter <code>Add Instanz>Import from zip</code> ein. Stell sicher, dass <a href="https://adoptium.net/de/">Java 17</a> ausgewählt ist im Launcher!
-        </h1>
-        <div id="snackbar"></div>
-    </div>
+	<p>Stell sicher, dass <a href="https://adoptium.net/de/">Java 17</a> ausgewählt ist im Launcher:
+	</p>
 
-    <script>
-    function copyLink(event) {
-        event.preventDefault()
-        navigator.clipboard.writeText(window.location.origin + "/" + event.target.getAttribute('href')).then(() => {
-            let x = document.getElementById("snackbar")
-            snackbar("Link kopiert!")
-        })
-    }
+	<pre>Einstellungen &gt; Java &gt; Auto-detect</pre>
+</div></main>
 
-    function snackbar(text) {
-            let x = document.getElementById("snackbar")
-            x.className = "show"
-            x.innerHTML = text
-            setTimeout(function () { x.className = x.className.replace("show", "") }, 3000);
-    } 
+	<footer class="svelte-9mou4b"><p>visit <a href="modpack" class="svelte-9mou4b">metroite.de/modpack</a> for instructions</p></footer>
+</div>
 
-    (function () {
-            // Add event listener
-            document.addEventListener("mousemove", parallax);
-            const elem = document.querySelector("#parallax");
-            // Magic happens here
-            function parallax(e) {
-                let _w = window.innerWidth / 2;
-                let _h = window.innerHeight / 2;
-                let _mouseX = e.clientX;
-                let _mouseY = e.clientY;
-                let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
-                let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
-                let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-                let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-                elem.style.backgroundPosition = x;
-            }
-
-        })();
-    </script>
-</body>
-
+</div>
+	</body>
 </html>
