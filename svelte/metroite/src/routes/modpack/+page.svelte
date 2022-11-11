@@ -16,10 +16,10 @@
 	<h1>Modpack instructions</h1>
 
 	<p>
-		Kopiere den Link zum <button title="Click to copy" id="copyLink" class="copyLink" href="Kings.mrpack" on:click|preventDefault={() => copyLink()}>Modpack</button> und füge den Link
+		Kopiere den Link zum <button title="Click to copy" id="copyLink" class="copyLink" href="Kings.zip" on:click|preventDefault={() => copyLink()}>Modpack</button> und füge den Link
 		in <a href="https://prismlauncher.org/download/">PrismLauncher</a> oder, falls mit kostenlosem
 		<a href="https://account.ely.by/login">ely.by Account</a>, in
-		<a href="https://github.com/fn2006/PollyMC/releases/download/5.1-hotfix2/PollyMC-Windows-5.1-hotfix2.zip">PollyMc</a> ein unter:
+		<a href="https://nightly.link/UltimMC/Launcher/workflows/main/develop">UltimMC</a> ein unter:
 	</p>
 
 	<pre>Add Instanz > Import from zip</pre>
