@@ -13,7 +13,7 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>Modpack instructions</h1>
+	<h1>Modpack Instructions</h1>
 
 	<p>
 		Kopiere den Link zum <button title="Click to copy" id="copyLink" class="copyLink" href="Kings.zip" on:click|preventDefault={() => copyLink()}>Modpack</button> und füge den Link
