@@ -1,9 +1,6 @@
 <script>
 	function copyLink() {
-        navigator.clipboard.writeText(window.location.origin + "/" + document.getElementById("copyLink")?.getAttribute('href')).then(() => {
-            let x = document.getElementById("copyLink");
-			console.log(x);
-        })
+        navigator.clipboard.writeText(window.location.origin + "/" + document.getElementById("copyLink")?.getAttribute('href'))
     }
 </script>
 
@@ -16,7 +13,7 @@
 	<h1>Modpack Instructions</h1>
 
 	<p>
-		Kopiere den Link zum <button title="Click to copy" id="copyLink" class="copyLink" href="Kings.zip" on:click|preventDefault={() => copyLink()}>Modpack</button> und füge den Link
+		Kopiere den Link zum <a title="Click to copy" id="copyLink" class="copyLink" href="Kings.zip" on:click|preventDefault={() => copyLink()}>Modpack</a> und füge den Link
 		in <a href="https://prismlauncher.org/download/">PrismLauncher</a> oder, falls mit kostenlosem
 		<a href="https://account.ely.by/login">ely.by Account</a>, in
 		<a href="https://nightly.link/UltimMC/Launcher/workflows/main/develop">UltimMC</a> ein unter:
