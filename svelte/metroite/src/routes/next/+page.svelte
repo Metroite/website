@@ -22,24 +22,18 @@
 			// @ts-ignore
 			document.getElementById("secs").innerHTML = seconds + "S "
 		}
-
-		count();
-		setInterval(count, 1000);
 	})
 </script>
 
 <svelte:head>
 	<title>Next</title>
-	<meta name="description" content="Next update countdown" />
+	<meta name="description" content="Next update released!" />
 </svelte:head>
 
 <section>
 	<h1>
 		<div class="rainbowText">
-            <p id="days"></p>
-			<p id="hours"></p>
-			<p id="mins"></p>
-			<p id="secs"></p>
+            Visit <a href="modpack">metroite.de/modpack</a> and update to the new modpack!
         </div>
 	</h1>
 </section>
