@@ -19,13 +19,13 @@
 		<a href="https://nightly.link/UltimMC/Launcher/workflows/main/develop">UltimMC</a> ein unter:
 	</p>
 
-	<pre>Add Instanz > Import from zip</pre>
+	<pre>Add Instance > Import from zip</pre>
 
 	<p>
 		Stell sicher, dass <a href="https://adoptium.net/de/">Java 17</a> ausgewählt ist im Launcher:
 	</p>
 
-	<pre>Einstellungen > Java > Auto-detect</pre>
+	<pre>Settings > Java > Auto-detect...</pre>
 </div>
 
 <style>
