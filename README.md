@@ -19,3 +19,11 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+## Deploying
+
+To deploy the build in `./build`:
+
+```bash
+npm run deploy
+```
