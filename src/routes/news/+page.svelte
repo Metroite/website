@@ -17,6 +17,8 @@
 <style>
     .blog {
         overflow-y: scroll;
-        height: 50vh;
+        height: 65vh;
+        max-height: fit-content;
+        resize: vertical;
     }
 </style>

@@ -13,7 +13,7 @@
 
 <img src="blog/server_start.png" alt="Server Start" width="500"/>
 
-#### Einige prägsame Zitate:
+#### Einige prägsame Momente:
 ```
 <Laygen> Der Neuanfang einer wundervollen Zivilisation.... 
 <Laygen> wir sehen uns bald brüder
