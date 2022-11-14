@@ -17,8 +17,8 @@
 			<li aria-current={$page.url.pathname === '/modpack' ? 'page' : undefined}>
 				<a href="/modpack">Modpack</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/next') ? 'page' : undefined}>
-				<a href="/next">Next</a>
+			<li aria-current={$page.url.pathname === '/news' ? 'page' : undefined}>
+				<a href="/news">News</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
